@@ -1,0 +1,57 @@
+/*Banner*/
+.banner {
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:relative;
+    padding:  0px 0;
+    height:35.5rem;
+    .banner-text{
+        position: absolute;
+        left: 23.2%;
+        top: 13.3%;
+        h2{
+            font-family: $headingFont;
+            font-size: 5.55rem;
+            font-weight: bold;
+            line-height: 1.2;
+            letter-spacing: 5px;
+            text-align: left;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+        h4{
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 1.27;
+            text-align: left;
+            color: #ffffff;
+            padding: 40px 0px 18px;
+        }
+        .play-icon{
+            width: 72px;
+            height: 72px;
+        }
+    }
+    .image-item{
+        img{
+            max-height: 35.5rem;
+            display: inline-block;
+        }
+    }
+    .video-item{
+        .card-video{
+            text-align: center;
+            .video-wrapper { 
+                height: 100%;
+                padding: 0;
+                video{
+                    position: static;
+                    max-height: 35.5rem;
+                } 
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,151 @@
+/*
+  Mixin structure is based on a modified (mixin names) version of csstyle.io:
+  https://dl.dropbox.com/s/xx1f2zi83cdy5er/_modified-csstyle.scss
+
+  Circular progress based on Geedmo's Pen "CSS3 Radial Progress Bar".
+*/
+
+// components
+@mixin component($name) {
+  .#{$name} {
+    @content
+  }
+}
+
+// modifiers
+// override components
+@mixin modifier($name) {
+  &.\--#{"" + $name} {
+    @content;
+  }
+}
+
+// allow childs to respond to modifiers on parents
+@mixin whenComponentModifier($modifier) {
+  $index: str-index(unquote("#{&}"), "__") - 1;
+  $component: str-slice(#{&}, 0, $index);
+
+  #{$component}.\--#{$modifier} & {
+    @content;
+  }
+}
+
+// childs
+// make up the structure of a component
+// override components
+@mixin child($name) {
+  // check if nested in an modifier
+  $modifierIndex: str-index(unquote("#{&}"), ".\\--");
+  $modifierIndex: 0 !default;
+  $modifierIndex: $modifierIndex - 1;
+
+  // check if nested in another child
+  $childIndex: str-index(unquote("#{&}"), "__");
+  $childIndex: 0 !default;
+  $childIndex: $childIndex - 1;
+
+  $component: str-slice(unquote("#{&}"), 0, $modifierIndex);
+
+  // child is nested in an modifier
+  @if $modifierIndex > 0 {
+    // child is also nested in another child
+    @if ($childIndex > 0) {
+      &__#{"" + $name} {
+        @content;
+      }
+    } @else {
+      & #{$component}__#{"" + $name} {
+        @content;
+      }
+    }
+  } @else {
+    &__#{"" + $name} {
+      @content
+    }
+  }
+}
+
+// tweaks
+// override components, modifiers, and modifiers
+@mixin tweak($name) {
+  .\+#{"" + $name} {
+    @content;
+  }
+}
+
+// locations
+// override components, childs, modifiers, and tweaks
+@mixin location($name) {
+  .\@#{"" + $name} {
+    @content;
+  }
+}
+
+
+// -- Config ------------
+$backgroundBarColor: #fff;
+$successBarColor: #000000;
+$warningBarColor: #000000;
+$dangerBarColor: #000000;
+$overlayColor: #ddd;
+$backColor: #f2f2f2;
+$barHeight: 20px;
+$elementSize: 145px;
+
+$step: 1; // step of % (100/$step = number of created classes)
+$loops: round(100 / $step);
+$increment: 360 / $loops;
+$half: round($loops / 2);
+
+// -- Circular progress ------------
+@include component(circularProgress) {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  width: $elementSize;
+  height: $elementSize;
+  border-radius: 50%;
+  border: 2px solid $backColor; // remove gradient color
+  background-color: $backgroundBarColor; // default 100%
+  box-sizing: initial;
+  @include child(range) {
+    margin-top: $elementSize + 20;
+  }
+
+  // Text overlay element
+  @include child(overlay) {
+    position: absolute;
+    width: $elementSize - $barHeight;
+    height: $elementSize - $barHeight;
+    background-color: $overlayColor;
+    border-radius: 50%;
+    margin-left: $barHeight/2;
+    margin-top: $barHeight/2;
+    text-align: center;
+    line-height: $elementSize - $barHeight;
+    font-size: 24px;
+  }
+
+  // Loop for creating modifier classes
+  @for $i from 0 through $loops {
+
+    $barColor: $successBarColor;
+    @if $i <= 66 { $barColor: $warningBarColor; }
+    @if $i <= 33 { $barColor: $dangerBarColor; }
+
+    @include modifier(#{$i*$step}) {
+
+      @if $i < $half {
+
+        $nextdeg: 90deg + ( $increment * $i );
+        background-image: linear-gradient(90deg, $backgroundBarColor 50%, transparent 50%, transparent), linear-gradient($nextdeg, $barColor 50%, $backgroundBarColor 50%, $backgroundBarColor);
+      } @else {
+        $nextdeg: -90deg + ( $increment * ( $i - $half ) );
+        background-image: linear-gradient($nextdeg, $barColor 50%, transparent 50%, transparent), linear-gradient(270deg, $barColor 50%, $backgroundBarColor 50%, $backgroundBarColor);
+      }
+
+    }
+  }
+
+}

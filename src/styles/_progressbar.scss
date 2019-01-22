@@ -1,0 +1,99 @@
+/*
+ * react-circular-progressbar styles
+ *
+ * All of the styles in this file are optional and configurable!
+ */
+
+.CircularProgressbar {
+  /*
+   * This fixes an issue where the CircularProgressbar svg has
+   * 0 width inside a "display: flex" container, and thus not visible.
+   *
+   * If you're not using "display: flex", you can remove this style.
+   */
+  width: 100%;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #3e98c7;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: #d6d6d6;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #3e98c7;
+  font-size: 20px;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+
+.CircularProgressbar .CircularProgressbar-background {
+  fill: #d6d6d6;
+}
+
+/*
+ * Sample background styles. Use these with e.g.:
+ *
+ *   <CircularProgressbar
+ *     className="CircularProgressbar-inverted"
+ *     background
+ *     percentage={50}
+ *   />
+ */
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-background {
+  fill: #3e98c7;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-text {
+  fill: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-path {
+  stroke: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
+  stroke: transparent;
+}
+
+
+/*Modiffy style by MP*/
+.cm-progressbar{
+    position: relative;
+    display: table;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 50%;
+    background: #182b47;
+    .progress{
+        padding: 3.5px;
+        float: left;
+        position: relative;
+        z-index: 1;
+        .CircularProgressbar-path {
+            stroke: #0069ff;
+        }
+        .CircularProgressbar-text {
+            fill: #ffffff;
+            font-size: 1rem;
+        }
+        .CircularProgressbar-trail {
+            stroke: #182b47;
+        }
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: calc(10% + 5px);
+        left: calc(10% + 5px);
+        width: calc(80% - 10px);
+        height: calc(80% - 10px);
+        border: 1px solid #fff;
+        border-radius: 50%;
+        background: #253c63;
+    }
+}

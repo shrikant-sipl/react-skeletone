@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#426FC4" fill-rule="nonzero" d="M77.962 24.716L55.97 2.94A3.247 3.247 0 0 0 53.685 2H22.402c-6.49 0-11.77 5.28-11.77 11.77v61.802c-.001 6.49 5.28 11.77 11.77 11.77h44.751c6.491 0 11.771-5.28 11.771-11.77V27.025a3.24 3.24 0 0 0-.962-2.308zm-20.97-11.625l10.971 10.863h-10.97V13.091z"/>
+        <text fill="#FFF" font-family="Cera-Bold" font-size="18" font-weight="bold" transform="translate(10.5 2)">
+            <tspan x="17.907" y="60.046">PDF</tspan>
+        </text>
+    </g>
+</svg>

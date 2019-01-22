@@ -1,0 +1,114 @@
+.auth-pages{
+    min-height: 100vh;
+    background-image: url(../../assets/images/bg-login.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login-header{
+	text-align: center;
+    padding: 13% 0;
+}
+
+.login-card-box {
+    max-width: 520px;
+    background-color: #182b47;
+    margin:0 auto 0rem;
+    min-height: 576px;
+    position: relative;
+
+    .login-form {
+        padding: 2.55rem 3.33rem 6.55rem;
+
+        label{
+            line-height: 1.25rem;
+            margin-bottom: 2px;
+        }
+
+        p{
+            font-size: 20px;
+        }
+
+        .login-with-buttons {
+            padding-bottom: 1.85rem;
+
+            .cta {
+                width:  100%;
+                margin-bottom: .85rem;
+
+                i{
+                    font-size: 34px;
+                    vertical-align: middle;
+                    display: inline-block;
+                    padding-right: 10px;
+                }
+
+                span{
+                    padding-bottom: 0px;
+                    display: inline-block;
+                    font-size: 20px;
+                    vertical-align: middle;
+                }
+            }
+
+            .cta-facebook {
+                background-color: #3c5193;
+                &:hover{
+                    background-color: #283f84;
+                }
+            }
+
+            .cta-google {
+                background-color: #da4733;
+                &:hover{
+                    background-color: #c83420;
+                }
+            }
+        }
+
+        .login-button-wrapper {
+            padding-top: 0.7rem;
+            display: table;
+            width: 100%;
+            padding-bottom: 2.2rem;
+        }
+    }
+
+    .login-form-footer{
+        padding:1.5rem 3.33rem;
+        border-top: 1px solid #eeeeee;
+        text-align: center;
+        font-size: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        &.cta-signup{
+            background-color:$accentColor;
+            color: white;
+            border-radius: 0;
+            width: 100%;
+        }
+    }
+
+    .back-to-login .icon-ic-back-black {
+        font-size: 35px;
+        color: white;
+        font-weight: bold;
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    & > .back-to-login{
+        position: absolute;
+        top: 10px;
+        left: 34px;
+    }
+}
+
+.confirm-your-email-popup{
+    h4{
+        font-weight: 500;
+        color: #444;
+        margin: 0 0 30px;
+    }
+}

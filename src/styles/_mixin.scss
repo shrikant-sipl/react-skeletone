@@ -1,0 +1,8 @@
+@mixin gradient($from, $to) {
+    /* fallback/image non-cover color */
+    background: $from;
+    background: -moz-linear-gradient(left, $from, $to);
+    background: -webkit-linear-gradient(left, $from,$to);
+    background: linear-gradient(to right, $from ,$to);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$from, endColorstr=$to,GradientType=1 );
+}

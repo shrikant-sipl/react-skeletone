@@ -1,0 +1,38 @@
+body.modal-open{
+    overflow: hidden;
+}
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.30);
+    text-align: center;
+    overflow: auto;
+    .modal-body{
+        position: relative;
+        text-align: left;
+        top: 0%;
+        transition: all 0.5s ease;
+        //transform: translateY(-50%);
+        display: inline-block;
+        background: white;
+        max-width: 520px;
+        border-radius: 0px;
+        background-color: #182b47;
+        padding: 2.55rem;
+        width: 100%;
+        .modal-close{
+            position: absolute;
+            top: 3px;
+            right: 6px;
+            font-size: 34px;
+            color: secondaryTextColor;
+            opacity: 0.5;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}

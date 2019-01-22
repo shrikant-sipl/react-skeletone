@@ -1,0 +1,61 @@
+.edit-profile{
+    padding: 37px 97px 58px;
+    background-color: $primaryColor;
+    margin: 40px auto 20px;
+    h5{
+        letter-spacing: 1.1px;
+        margin-bottom: 3.44rem;
+        font-weight: normal;
+    }
+    .profile-pic-wrapper{
+        text-align: center;
+        .profile-pic{
+            max-width: 197px;
+            max-height: 197px;
+            display: inline-block;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            background-color: #c0c3c5;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border: 3px solid #fff;
+            position: relative;
+            &:after {
+                padding: 50%;
+                content: '';
+                display: inline-block;
+            }
+            .upload-profile-pic{
+                position: absolute;
+                width: 63px;
+                height: 63px;
+                right: 0;
+                bottom: 0;
+                border-radius: 50%;
+                overflow: hidden;
+                font-size: 30px;
+                padding-top: 13px;
+                text-align: center;
+                background: $accentColor;
+                cursor: pointer;
+                &:hover{
+                    background: darken($accentColor, 10%);
+                }
+                .form-group   {
+                    opacity: 0;
+                    position: absolute;
+                    top: -35px;
+                    left: 0px;
+                    z-index: 1;
+                    input{
+                        width: 63px;
+                        height: 100px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.profile-progress {
+    background: #253c63;
+    padding: 2rem 2rem 4rem;
+    position: relative;
+    margin-bottom: 2.75rem;
+    margin-top: 2.75rem;
+    ul {
+        z-index: 1;
+        position: relative;
+    }
+    h5 {
+        font-size: 16px;
+        font-weight: normal;
+        text-align: center;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin: 1.5rem 0 0 0;
+    }
+    h4 {
+        font-size: 1.66rem;
+        font-weight: normal;
+        color: white;
+        font-family: $headingFont;
+        text-align: center;
+        letter-spacing: 3.1px;
+    }
+    .bg-gradient {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#253c63+0,365280+48,253c63+100 */
+        background: #253c63;
+        /* Old browsers */
+        background: -moz-linear-gradient(left, #253c63 0%, #365280 48%, #253c63 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, #253c63 0%, #365280 48%, #253c63 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, #253c63 0%, #365280 48%, #253c63 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#253c63', endColorstr='#253c63', GradientType=1);
+        /* IE6-9 */
+        position: absolute;
+        bottom: 4rem;
+        height: 6rem;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+    }
+}

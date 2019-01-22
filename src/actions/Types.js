@@ -1,0 +1,20 @@
+export const FACEBOOK_UNREGISTERED_USER     = 'facebook_unregistered_user';
+export const GOOGLE_UNREGISTERED_USER       = 'google_unregistered_user';
+export const PROFILE_DETAILS                = 'profile_details';
+export const COURSE_DETAILS                 = 'course_details';
+export const THEME_DETAILS_CLASS_PROGRESS   = 'theme_details_class_progress';
+export const CLASS_PROGRESS                 = 'class_progress';
+export const COURSE_DATA                    = 'course_data';
+export const CLASS_DETAILS                  = 'class_details';
+export const NOTIFICATIONS                  = 'notifications';
+export const FOLLOWING_USERS                = 'following_users';
+export const FOLLOWERS                      = 'followers';
+export const NEW_PARTICIPATION              = 'new_participation';
+export const UPLOAD_PARTICIPATION_MEDIA     = 'upload_participation_media';
+export const UPDATE_PARTICIPATION           = 'update_participation';
+export const CHALLENGE_PARTICIPATIONS       = 'challenge_participations';
+export const COMPLAINT_CATEGORIES           = 'complaint_categories';
+export const NETWORK_DATA                   = 'network_data';
+export const STATIC_PAGE_CONTENT            = 'static_page_content';
+export const AUTH_USER_DETAILS              = 'auth_user_details';
+

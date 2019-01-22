@@ -1,0 +1,314 @@
+.class-and-module-title{
+    background-color: $primaryColor;
+    padding: 1.61rem 0 2.22rem;
+    .class-name {
+        font-size: 1.33rem;
+        font-weight: $fontWeightMedium;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+    .module-name {
+        font-size: 1.22rem;
+        color: #fff;
+    }
+}
+
+/*Tabs*/
+.class-nav-tab{
+    background-color: $primaryColor;
+    .tabs {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            display: inline-block;
+            max-width: 210px;
+            text-align: center;
+            width: 100%;
+            a {
+                padding-bottom: 1.75rem;
+                font-size: 22px;
+                text-align: center;
+                color: #ffffff;
+                display: block;
+                opacity: 0.5;
+                transition: all ease-in 300ms;
+                text-transform: uppercase;
+                  letter-spacing: 0.7px;
+                &:hover, &:focus, &.active{
+                    opacity: 1;
+                    border-bottom: 5px solid  $accentColor;
+                }
+            }
+        }
+    }
+}
+
+
+.class-details {
+    padding: 2.77rem 0px;
+    position: relative;
+    .collapsible-button {
+        position: absolute;
+        right: -11px;
+        top: -45px;
+    }
+    .class-bottom-nav{
+        text-align: right;
+        .cta{
+            vertical-align: middle;
+            span , i{
+                font-size: 20px;
+                padding:0 10px;
+            }
+
+            &.m-r15{
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+/*Card*/
+.card{
+    background: #253c63;
+    margin: 0px 0px 30px;
+    .card-heading {
+        font-size: 1.33rem;
+        font-weight: bold;
+        color: $primaryTextColor;
+        padding:1.83rem 2.22rem 1.44rem;
+    }
+    .card-img{
+        position: relative;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .card-audio{
+        position: relative;
+        background-color: $primaryColor;
+        height: 410px;
+        background-image: url(../../assets/images/bg-line-audio-no-colour.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        .audio-play{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: auto;
+            transform: translateY(-50%) translateX(-50%);
+        }
+    }
+    .card-details {
+        padding: 0px 1.44rem 3.61rem;
+        font-size: 1.11rem;
+        line-height: 1.55rem;
+        color: $primaryTextColor;
+        .read-more{
+            font-size: 18px;
+            font-weight: $fontWeightMedium;
+        }
+    }
+    .card-button{
+        min-width: 212px;
+        opacity: 0.8;
+        border-radius: 2px;
+        background-color: #cccccc;
+        color: #fff;
+        font-size: 1.22rem;
+        position: absolute;
+        top: 89%;
+        right: 3%;
+        padding: 11px 10px;
+        text-align: center;
+    }
+}
+
+.list-downloads {
+    padding: 0rem 2.22rem 0.65rem;
+    .download-block {
+        display:table;
+        width:100%;
+        .download-img {
+            display:table-cell;
+            vertical-align:top;
+            text-align:center;
+            width: 1%;
+            img {
+                margin-bottom: 10px;
+                min-width: 90px
+            }
+        }
+        .download-details {
+            display:table-cell;
+            vertical-align:middle;
+            width: 80%;
+            padding-left: 15px;
+            h4 {
+                font-size: 1.33rem;
+                color: $primaryTextColor;
+                margin: 0px;
+            }
+            p {
+                font-size: 1rem;
+                color: $primaryTextColor;
+                margin-top: 10px;
+            }
+        }
+        .download-action{
+            display:table-cell;
+            vertical-align:middle;
+            img{
+                min-width: 44px
+            }
+        }
+    }
+}
+
+
+.classes-progress-sidebar-wrapper{
+    max-width: 50%;
+    position:fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.3s all ease-in-out;
+    &:before{
+        content:'';
+        position:fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: black;
+        z-index: 0;
+        opacity: 0.5
+    }
+    .classes-progress-sidebar {
+    	background: #182b47;
+    	padding: 30px 30px 30px 0;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        .icon-close{
+            font-size: 36px;
+            cursor: pointer;
+            &:hover{
+                color:$accentColor;
+                transition: all 0.5s ease;
+            }
+        }
+        h4 {
+        	font-size: 24px;
+        	font-weight: 500;
+        	color: #ffffff;
+        	padding: 30px;
+        	text-align: center;
+            font-family: $headingFont;
+            text-transform: uppercase;
+            letter-spacing: 1.7px;
+        }
+        .progress-list {
+            @include gradient( $primaryColor, transparent);
+        	padding: 100px 50px 100px 110px;
+            overflow-y: auto;
+            height: calc(100vh - 150px);
+            .list-item {
+            	list-style: none;
+            	position: relative;
+                .list-block {
+                	display: table;
+                	width: 100%;
+                	padding: 30px 0px 30px;
+                    .list-left {
+                    	display: table-cell;
+                    	width: 11%;
+                    	vertical-align: top;
+                    	text-align: center;
+                        h5 {
+                        	font-size: 20px;
+                        	font-weight: 500;
+                        	text-align: center;
+                        	color: #ffffff;
+                        	margin: 0px 0px 0px;
+                        }
+                        strong {
+                        	font-size: 40px;
+                        	line-height: 0.9;
+                        	color: #ffffff;
+                        }
+                    }
+                    .list-right {
+                    	display: table-cell;
+                    	vertical-align: top;
+                    	width: 90%;
+                        padding-left: 38px;
+                        h5 {
+                        	font-size: 20px;
+                        	line-height: 0.65;
+                        	text-align: left;
+                        	color: #ffffff;
+                        	margin: 7px 0px 10px;
+                        	font-weight: normal;
+                        }
+                        .time {
+                        	padding-left: 10px;
+                        	font-size: 16px;
+                        }
+                    }
+                }
+                &:before {
+                	background: #182b47;
+                	top: 0%;
+                    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+                	content: "";
+                	height: 100%;
+                	left: -30px;
+                	position: absolute;
+                	width: 2.7px;
+                	border: solid 2px #182b47;
+                }
+                &:after {
+                	background: #182b47;
+                	border: solid 2px #ffffff;
+                	border-radius: 50%;
+                	content: "";
+                	height: 21px;
+                    transform: translateY(-50%);
+                	left: -38px;
+                	position: absolute;
+                	top: 50%;
+                	width: 21px;
+                }
+                &.class-progress-done{
+                    &:before {
+                    	background: #ff7c14;
+                    	border: solid 2px #ff7c14;
+                    }
+                    &:after {
+                    	background: #ff7c14;
+                    	border: solid 1px #f1f1f1;
+                    }
+                }
+                &:first-child{
+                	border-bottom: none;
+                    &:before {
+                        top: inherit;
+                        bottom: 0;
+                        height: 50%;
+                    }
+                }
+                &:last-child{
+                	border-bottom: none;
+                    &:before {
+                        height: 50%;
+                    }
+                }
+            }
+        }
+    }
+}

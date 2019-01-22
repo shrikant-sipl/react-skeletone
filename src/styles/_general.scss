@@ -1,0 +1,246 @@
+body,html{font-size: 18px;background-color: #182b47}
+body{font-family: $bodyFont;color: white}
+a, .link{
+    cursor: pointer;
+    text-decoration: none;
+    color: $accentColor;
+    transition: all 0.5s ease;
+    &:hover{
+        color: darken($accentColor, 10%);
+    }
+}
+label{color: white;font-size: 1rem}
+p{margin-top: 0}
+
+.profile-page-title{
+    text-align: center;
+    margin:2.05rem 0;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+}
+
+/*Form Elements*/
+.inputbox, .react-datepicker-wrapper {
+    display: block;
+    border: 2px solid #e5e5e5;
+     border-radius: 2px;
+    padding: 0px 10px;
+    margin-left: -5px;
+    -moz-transform: skewX(-16deg);
+    -webkit-transform: skewX(-16deg);
+    -o-transform: skewX(-16deg);
+    -ms-transform: skewX(-16deg);
+    transform: skewX(-16deg);
+    margin-bottom: 1rem;
+    position: relative;
+    transition: all 0.5s ease;
+    [type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea,select{background:transparent;border:none;color:white; height: 2.8rem; border-radius: 0px; box-shadow: none !important; font-size: 1.11rem; margin-bottom: 0rem; -moz-transform: skewX(16deg); -webkit-transform: skewX(16deg); -o-transform: skewX(16deg); -ms-transform: skewX(16deg); transform: skewX(16deg);}
+    [type=password]{font-size: 1.2rem;font-family: 'caption';letter-spacing: 2px;}
+    select {
+        padding-right: 30px;
+        option{
+            color: $primaryColor;
+        }
+        &:focus{
+            outline: none;
+        }
+        & + i{
+            -moz-transform: skewX(16deg) rotate(90deg);
+            -webkit-transform: skewX(16deg) rotate(90deg);
+            -o-transform: skewX(16deg) rotate(90deg);
+            -ms-transform: skewX(16deg) rotate(90deg);
+            transform: skewX(16deg) rotate(90deg);
+            position: absolute;
+            right: 14px;
+            top: 17px;
+            z-index: -1;
+        }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus
+    input:-webkit-autofill,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        -webkit-text-fill-color: white;
+        -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+    &.active{border: 2px solid $accentColor;}
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+    input {
+        display: none;
+
+        &:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        &:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        &:checked + .slider:before {
+            -webkit-transform: translateX(32px);
+            -ms-transform: translateX(32px);
+            transform: translateX(32px);
+        }
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: transparent;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        border: 1px solid #fff;
+        border-radius: 34px;
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 0;
+            bottom: 2px;
+            background-color: white;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+    }
+}
+
+/*Custom css*/
+.row{max-width: 1024px;}
+.d-ib{display: inline-block;}
+.uc{text-transform: uppercase;}
+
+/* Call To Actions*/
+.cta{
+    border-radius: 2px;
+    color: #ffffff;
+    padding: 8px;
+    text-align: center;
+    display: inline-block;
+    line-height: 30px;
+    height: 50px;
+    background-color:$accentColor;
+    min-width:11.11rem;
+    font-size: .833rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -moz-transform: skewX(-16deg);
+    -webkit-transform: skewX(-16deg);
+    -o-transform: skewX(-16deg);
+    -ms-transform: skewX(-16deg);
+    transform: skewX(-16deg);
+    & > span, & > i{
+        -moz-transform: skewX(16deg); -webkit-transform: skewX(16deg); -o-transform: skewX(16deg); -ms-transform: skewX(16deg);transform: skewX(16deg);
+        display: inline-block;
+    }
+    & > span{
+        font-weight: $fontWeightBold;
+    }
+    &.cta-bordered{
+        background: transparent;
+        border: 2px solid $accentColor;
+    }
+    &.cta-large{
+        span{
+            font-size: 1.11rem;
+            padding-top: 3px;
+        }
+    }
+    &:not([disabled]):hover{
+        background-color:darken($accentColor, 10%);
+        color:white;
+    }
+    &[disabled], &.disabled{
+        color: rgba(255, 255, 255, 0.50);
+        pointer-events: none;
+    }
+}
+
+/*Error Message*/
+.text-help {font-size: 0.75rem;letter-spacing: 0.5px;color: #ff5841;margin-top: -15px;}
+
+/*Text Color*/
+.white{
+    color:white;
+}
+
+/*Typography*/
+h2{font-size:$h2}
+
+.section-title{
+    display: table;
+    margin-top: 0;
+    margin-bottom: 2.22rem;
+    table-layout: fixed;
+    width: 100%;
+    .title{
+        vertical-align: middle;
+        display: table-cell;
+        font-size:$h2;
+        font-weight: $fontWeightMedium;
+        letter-spacing: 1px;
+        color:$primaryTextColor;
+        text-transform: uppercase;
+        &.white{
+            color:$whiteTextColor;
+        }
+    }
+    .right-taxt{
+        vertical-align: middle;
+        text-align: right;
+        display: table-cell;
+        a{
+            font-size: 1.1rem;
+            font-weight: $fontWeightMedium;
+            text-align: center;
+            text-transform: none;
+        }
+    }
+}
+
+/*gradient-box*/
+.gradient-box{
+    @include gradient( $primaryColor, transparent);
+}
+
+/*React Date Picker Style*/
+.react-datepicker-wrapper{
+    display: block;
+    .react-datepicker__input-container{
+        display: block;
+        .form-control{
+            cursor: pointer;
+        }
+    }
+}
+.react-datepicker__month{
+    min-height: 259px;
+}
+/*React month Picker Style*/
+.month-picker > .rmp-container .rmp-popup .rmp-pad > div label{color: #6f6f6f;}
+.month-picker > .rmp-container .rmp-popup .rmp-pad > div i{font-size: 0}
+.month-picker > .rmp-container .rmp-popup .rmp-pad > div i:after{font-family: 'hi-education-icon';content: '\e90b';font-size: 20px;}
+.month-picker > .rmp-container .rmp-popup .rmp-pad > div i.next:after{content: '\e90a'}
+.validation-error-mr{margin-top: 1px !important}

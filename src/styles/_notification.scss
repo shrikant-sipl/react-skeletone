@@ -1,0 +1,135 @@
+.dropdown-notification-list{
+    .dropdown-menu{
+        min-width: 427px;
+    }
+    .notification-top{
+        padding-bottom: 10px;
+        span{
+            font-size: 1rem;
+            padding: 0 12px;
+        }
+        a{
+            line-height: 2.29;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 0 12px;
+        }
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            border-top: 1px solid #ececec;
+            display: table;
+            width: 100%;
+            vertical-align: middle;
+            .user-image{
+                display: table-cell;
+                width: 61px;
+                vertical-align: middle;
+                padding: 1rem 0;
+                span{
+                    border-radius: 50%;
+                    max-width: 49px;
+                    max-height: 49px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #c0c3c5;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    float: left;
+                    overflow: hidden;
+                    &:after {
+                        padding: 50%;
+                        content: '';
+                        display: inline-block;
+                    }
+                }
+            }
+            .user-discription{
+                display: table-cell;
+                vertical-align: middle;
+                h6{
+                    margin: 0;
+                }
+            }
+            .user-close{
+                display: table-cell;
+                width: 61px;
+                text-align: center;
+                vertical-align: middle;
+                color: #444444;
+                padding-top: 11px;
+            }
+        }
+    }
+}
+.notification-list{
+    margin-top: 40px;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            @include gradient( $primaryColor, transparent);
+            display: table;
+            width: 100%;
+            vertical-align: middle;
+            padding: 0 50px 0 40px;
+            margin-bottom: 5px;
+            .user-image{
+                display: table-cell;
+                width: 67px;
+                vertical-align: middle;
+                padding: 1.33rem 0;
+                text-align: center;
+                small{
+                    display: block;
+                    margin-top: 10px;
+                    white-space: nowrap;
+                }
+                span{
+                    border-radius: 50%;
+                    max-width: 67px;
+                    max-height: 67px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #c0c3c5;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    display:block;
+                    overflow: hidden;
+                    &:after {
+                        padding: 50%;
+                        content: '';
+                        display: inline-block;
+                    }
+                }
+            }
+            .user-discription{
+                display: table-cell;
+                vertical-align: top;
+                padding-top: 1.5rem;
+                padding-left: 37px;
+                padding-right: 1rem;
+                p{
+                    line-height: 1.6;
+                    font-size: 1.11rem;
+                    margin: 0;
+                }
+            }
+            .user-close{
+                display: table-cell;
+                width: 1%;
+                white-space: nowrap;
+                vertical-align: middle;
+            }
+            &.unread{
+                border-left:12px solid $accentColor 
+            }
+        }
+    }
+}

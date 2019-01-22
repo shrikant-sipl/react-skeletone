@@ -1,0 +1,94 @@
+/*Navigation*/
+ .ie-header {
+    width: 100%;
+    height: 100px;
+    background-color: $primaryColor;
+    display: table;
+    padding: 0px 80px;
+     .nav-left {
+        display: table-cell;
+        vertical-align: middle;
+        width: 40%;
+        .logo{
+            a {
+                color: $primaryTextColor
+            }
+        }
+    }
+    .nav-right {
+        display: table-cell;
+        vertical-align: middle;
+        width: 60%;
+        text-align: right;
+        .navbar {
+            display: inline-block;
+            padding-left: 0;
+            & > li {
+                list-style: none;
+                display: inline-block;
+                padding: 0px 1.94rem;
+                transition: all ease-in 300ms;
+                vertical-align: middle;
+                & > a{
+                    transition: all ease-in 300ms;
+                    opacity: 0.5;
+                    font-size: 18px;
+                    font-weight: $fontWeightMedium;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: $primaryTextColor !important;
+                    &:hover, &.active{
+                        opacity: 1;
+                    }
+                }
+                & > .dropdown-menu-wrapper > a {
+                    opacity: 1;
+                    font-weight: $fontWeightMedium;
+                    text-align: center;
+                    color: $primaryTextColor !important;
+                    transition: all ease-in 300ms;
+                    .item span:not(.notification){
+                        opacity: 0.5;
+                        &:hover, &.active{
+                            span{ opacity: 1;}
+                        }
+                    }
+                }
+                &.user-profile{
+                    padding-right: 0;
+                    padding-left: .75rem;
+
+                }
+                .dropdown-menu-wrapper{
+                    .user-avatar{
+                        background: white;
+                        border-radius: 50%;
+                        height: 42px;
+                        width: 42px;
+                        border:2px solid #fff;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        display: inline-block;
+                    }
+                }
+                .notification{
+                    width: 18px;
+                    background-color: $secondaryColor;
+                    font-size: 8px;
+                    font-weight: bold;
+                    text-align: center;
+                    color: #182b47;
+                    padding: 8px 0 0;
+                    line-height: 5px;
+                    display: inline-block;
+                    border-radius: 50px;
+                    height: 18px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}

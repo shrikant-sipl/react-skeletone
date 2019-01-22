@@ -1,0 +1,270 @@
+.section-module-banner{
+    @include gradient( $primaryColor, transparent);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .tab-container{
+        padding-top: 101px;
+        color: white;
+        text-align: center;
+        min-height: 468px;
+        padding-bottom: 50px;
+        h1{
+            font-size: 60px;
+            font-family: $headingFont;
+            text-transform: uppercase;
+            letter-spacing: 6.5px;
+        }
+        p{
+            margin-top: 40px;
+            font-size: 22px;
+            font-weight: normal;
+            line-height: 1.25;
+        }
+    }
+}
+
+.section-module-listing{
+    padding-top:5.25rem;
+    .cta{
+        font-size: 20px;
+        max-width: 469.1px;
+        width: 100%;
+        margin-bottom: 5.25rem;
+    }
+    .module-listing{
+        padding:0 0rem 5.25rem;
+        margin: 0;
+        background-position: center bottom;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        li{
+            transition: all 0.5s ease;
+            padding: 0;
+            .module-list-item-wrapper {
+                position: relative;
+                overflow:  hidden;
+                display: block;
+                background-repeat: no-repeat;
+                background-position: top center;
+                background-size: cover;
+                max-height: 512px;
+                .module-title {
+                    position: absolute;
+                    z-index: 0;
+                    top: 36px;
+                    right: 36px;
+                    display: block;
+                    color: white;
+                    text-align:  right;
+                    font-size: 2.5rem;
+                    .module-completed{
+                        display: block;
+                        text-align: right;
+                        font-size: 1rem;
+                    }
+                }
+                .module-count{
+                    font-size: 18.75rem;
+                    line-height:12.3rem;
+                    font-weight: bold;
+                    position: absolute;
+                    left: -16px;
+                    bottom: 0;
+                    opacity: 0.7;
+                    color: white;
+                }
+                &:after{
+                    display: block;
+                    padding-top: 100%;
+                    content: '';
+                    top: 0
+                }
+                &.bg-no-image{
+                    background-color: $primaryColor;
+                    .no-image-text{
+                        position: absolute;
+                        font-size: 2.2rem;
+                        color: white;
+                        top: 50%;
+                        transform: translate(-50%);
+                        left: 50%;
+                        opacity: 0.3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.section-about-teacher {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 52px 0;
+    min-height: 963px;
+    h3 {
+        text-align: center;
+        font-size: 22px;
+        font-weight: $fontWeightMedium;
+        margin: 0 0 90px;
+    }
+    h2 {
+        margin-top:  0;
+        font-size: 40px;
+        font-weight: $fontWeightMedium;
+        margin-bottom: 22px;
+    }
+    p {
+        font-size: 20px;
+        font-weight: $fontWeightMedium;
+    }
+}
+
+.classes-listing {
+    margin:1rem  0 0 ;
+    list-style: none;
+    padding: 0;
+    & > li {
+        padding: 0;
+        .class-list-wrapper {
+            position: relative;
+            border-radius: 2px;
+            border: solid 2px #0083fe;
+            margin-bottom:  15px;
+            width: 100%;
+            display: table;
+            height: 100px;
+            & > div {
+                display: table-cell;
+                vertical-align: middle;
+                color: $primaryTextColor;
+                padding: 0 42px
+            }
+            a{
+                color: white;
+                &:hover{
+                    color: $accentColor;
+                }
+            }
+            .class-number{
+                text-align: center;
+                width: 1%;
+                .class-number-label{
+                    font-size: 16px;
+                    display: block;
+                    text-transform: uppercase;
+                    line-height: 20px;
+                    font-weight: 600;
+                    margin-top: 7px;
+                }
+                .class-number-index{
+                    font-size: 40px;
+                    font-weight: $fontWeightMedium;
+                    line-height: 35px;
+                    letter-spacing: 2px;
+                }
+            }
+            .class-title{
+                h5 {
+                    font-size: 22px;
+                    font-weight: 400;
+                    margin: 0;
+                    span {
+                        color: #999999;
+                    }
+                }
+            }
+            .class-time{
+                width: 110px;
+                white-space: nowrap;
+                padding: 0;
+            }
+            .class-status{
+                width: 1%;
+                padding-right: 10px;
+                img{
+                    min-width: 35px;
+                }
+            }
+            .class-action{
+                width: 1%;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                top: 1px;
+                right: -13px;
+                height: calc(100% + 1px);
+                width: 24px;
+                background: #182b47;
+                border-left: 2px solid #0083fe;
+                -webkit-transform: skew(-13deg);
+                -moz-transform: skew(-13deg);
+                -o-transform: skew(-13deg);
+            }
+        }
+
+    }
+
+}
+
+.classes-detail{
+    background: $primaryColor;
+    padding: 1.5rem 1.5rem 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.wrapper-modal-modules-sign{
+    .modal-body{
+        max-width: 576px;
+        padding:0;
+    }
+    .modal-close{
+        display: none;
+    }
+    .modal-modules-sign{
+        .modal-modules-sign-header{
+            color:white;
+            padding: 2.66rem 1rem;
+            background-image: url(../../assets/images/bg-subscription-model.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            text-align: center;
+            h3{
+                font-size: 2rem;
+                font-family: $headingFont;
+                letter-spacing: 3px;
+                margin-bottom: 0;
+                max-width: 424px;
+                margin: auto;
+                text-transform: uppercase;
+                font-weight: $fontWeightNormal;
+            }
+            h5{
+                font-size: 1.66rem;
+                font-weight: $fontWeightMedium;
+                padding-top: 1.66rem;
+                margin-bottom: 0;
+            }
+        }
+        .modal-modules-sign-content {
+            color: $primaryTextColor;
+            padding: 2.22rem;
+            text-align: center;
+            h5{
+                font-size: 1.22rem;
+            }
+            p{
+                font-size: 1rem;
+                margin-bottom: 0;
+            }
+        }
+        .modal-modules-sign-action {
+            padding: 0 2.22rem 1.66rem;
+        }
+    }
+}
